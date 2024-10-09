@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "name": "Innovation at Your Fingertips",
+      "src": "./images/img1.jpg",
+      "desc": "Discover the latest trends, insights, and tools to stay ahead in today’s fast-paced world. Our expert articles ensure you never miss a beat."
+    },
+    {
+      "name": "Your Source of Inspiration",
+      "src": "images/img3.jpg",
+      "desc": "Dive into our wide array of resources crafted to ignite your passion and fuel your creativity. From tech to lifestyle, we've got you covered."
+    },
+    {
+      "name": "Where Passion Meets Expertise",
+      "src": "images/expertise.jpg",
+      "desc": "We believe in the power of authentic storytelling and expert-driven content. Explore articles that bring depth and value to your interests."
+    }
+  ]
+}
