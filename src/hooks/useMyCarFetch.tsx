@@ -1,37 +1,37 @@
 import { useEffect, useState } from 'react';
 
-const images = [
-  {
-    name: 'Image 1',
-    src: './images/img1.jpg',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-  {
-    name: 'Image 2',
-    src: 'images/img2.png',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-  {
-    name: 'Image 3',
-    src: 'images/img3.jpg',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-  {
-    name: 'Image 4',
-    src: 'images/img4.jpg',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-  {
-    name: 'Image 5',
-    src: 'images/img5.jpg',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-  {
-    name: 'Image 6',
-    src: 'images/img6.jpg',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
-  },
-];
+// const images = [
+//   {
+//     name: 'Image 1',
+//     src: './images/img1.jpg',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+//   {
+//     name: 'Image 2',
+//     src: 'images/img2.png',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+//   {
+//     name: 'Image 3',
+//     src: 'images/img3.jpg',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+//   {
+//     name: 'Image 4',
+//     src: 'images/img4.jpg',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+//   {
+//     name: 'Image 5',
+//     src: 'images/img5.jpg',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+//   {
+//     name: 'Image 6',
+//     src: 'images/img6.jpg',
+//     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa libero pariatur. Fugit sunt adipisci similique odio beatae nobis illum minima impedit expedita. Autem est, iste voluptatem fugit odit adipisci!',
+//   },
+// ];
 
 function useMyCarFetch() {
   const [myImages, setMyImages] = useState<
@@ -49,7 +49,9 @@ function useMyCarFetch() {
           throw new Error('could not get images');
         }
         const data = await res.json();
-        setMyImages(data ? [...data.images] : [...images]);
+        console.log(data);
+
+        setMyImages(data.images);
         setIsloading(false);
       } catch (error) {
         console.error(error);
